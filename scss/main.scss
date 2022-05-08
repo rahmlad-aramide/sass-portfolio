@@ -1,0 +1,122 @@
+@import "config";
+@import "home";
+@import "menu";
+@import "about";
+@import "skills";
+@import "projects";
+@import "contact";
+@import "responsive";
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+body{
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    font-family: "Roboto" , cursive;
+    line-height: 1;
+    position: relative;
+}
+
+
+.logo-title {
+    font-family: 'MedievalSharp', cursive;
+    border: 2px solid;
+    border-left: none;
+    padding: 2px 0;
+    border-right: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2000;
+}
+h1, h2, h3 {
+    font-weight: 400;
+}
+nav{
+    ul{
+        li{
+            list-style: none;
+            display: inline;
+            a {
+                color: set-text-color($primary-color);
+                text-decoration: none;
+                padding: 1rem;
+            }
+        }
+    }
+}
+.text--secondary {
+    color: $secondary-color;
+}
+
+// header{
+//     width: 100%;
+//     z-index: 2;
+//     position: fixed;
+// }
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    transition: 1s;
+    width: 100%;
+}
+
+header.sticky{
+    background-color: rgba(0, 0, 0, 0.9);
+    // color: #fff;
+    padding: 0 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 900px){
+    header.sticky:not(.contact) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .logo-title {
+        margin-right: 1rem;
+        font-size: 20px;
+    }
+    header.sticky .logo-title:not(.contact) {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+}
+
+main{
+    height: 100%;
+    width: 100%;
+
+    .social--icons{
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        a {
+            color: set-text-color($primary-color);
+            padding: 0.4rem;
+            text-decoration: none;
+            @include transition-ease;
+
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+footer{
+    font-size: 1rem;
+    position: fixed;
+    text-align: right;
+    padding: 1rem;
+    color: set-text-color($primary-color);
+    right: 1rem;
+    bottom: 0.4rem;
+}

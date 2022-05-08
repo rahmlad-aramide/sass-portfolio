@@ -1,0 +1,92 @@
+.about {
+  padding-bottom: 2rem;
+  &--bio--image {
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(
+        to left,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.2)
+      ),
+      url(../img/standing.jpg) center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    h6{
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
+    &--bio{
+        width: 80%;
+        text-align: center;
+
+        .text--secondary{
+            padding-bottom: 1rem;
+        }
+    }
+    .jobs{
+        width: 60vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+
+        &--job{
+            background: lighten($primary-color, 10%);
+            padding: 0.5rem;
+            border-bottom: 2px solid $secondary-color;
+
+            h2, h3 {
+                margin: 0.5rem 0;
+            }
+            h6{
+                margin: 0.3rem 0;
+            }
+        }
+    }
+    .social--icons {
+        display: flex;
+        flex-direction: column;
+
+    }
+    footer {
+        transform:
+         rotate(90deg)
+        translate(-3rem, -5rem);
+    }
+}
+// @media (max-width: 900px){
+//     .about {
+//         &--bio--image {
+//             height: 50vh;
+//             width: 100%;
+//             background: linear-gradient(
+//                 to right,
+//                 rgba($primary-color, 0.9),
+//                 rgba($primary-color, 0.3)
+//               ),
+//               url(../img/hero.jpg) center -100px;
+//             background-size: cover;
+//         }
+//     }
+// }
+// @media (max-width: 600px){
+//    .about {
+//     &--bio--image {
+//         height: 50vh;
+//         width: 100%;
+//         background: linear-gradient(
+//             to right,
+//             rgba($primary-color, 0.9),
+//             rgba($primary-color, 0.3)
+//           ),
+//           url(../img/hero.jpg) center -80px;
+//         background-size: cover;
+//         }
+//     }
+// }
