@@ -1,7 +1,7 @@
 .about {
   padding-bottom: 2rem;
   &--bio--image {
-    height: 50vh;
+    height: 100vh;
     width: 100%;
     background: linear-gradient(
         to left,
@@ -58,6 +58,9 @@
         transform:
          rotate(90deg)
         translate(-3rem, -5rem);
+    }
+    .text--secondary {
+        font-weight: 600;
     }
 }
 // @media (max-width: 900px){

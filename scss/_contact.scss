@@ -116,8 +116,8 @@
 .contact_info_box .text h3 {
   padding-bottom: 10px;
 }
-  @media (max-width: 900px){
-      .contact{
+@media (max-width: 900px){
+  .contact{
         &--display {
           display: flex;
           flex-direction: column;
@@ -127,7 +127,14 @@
              display: flex;
              flex-direction: column;
            }
+           
+           footer {
+            transform:
+             rotate(90deg)
+            translate(-3rem, -5rem);
+        }
        }
+       
   
   // @media (max-width: 600px){
   //    .contact{
