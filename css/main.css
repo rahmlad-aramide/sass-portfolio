@@ -293,7 +293,7 @@ nav .nav--menu--link:hover {
 .projects h6 {
   font-size: 1rem;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem 1rem;
 }
 .projects--bio--image {
   height: 45vh;
@@ -380,6 +380,63 @@ nav .nav--menu--link:hover {
   transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
+@media (max-width: 900px) {
+  .projects--btn {
+    border: 2px solid #000;
+    margin: 0 5rem;
+    padding: 1rem 0;
+    opacity: 0;
+    color: #000;
+    transition: all 0.5s ease-in-out;
+  }
+  .projects--items {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .projects--item {
+    position: relative;
+    border-bottom: 2px solid #ff652f;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .projects--item img {
+    width: 100%;
+  }
+  .projects--item::after {
+    content: "";
+    top: 50%;
+    height: 50%;
+    width: 100%;
+    opacity: 0.9;
+    left: 0;
+    background: #ff652f;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+  }
+  .projects--item .projects--btn {
+    width: fit-content;
+    margin: 0 auto;
+    opacity: 1;
+    top: 50%;
+    z-index: 2000;
+  }
+  .projects--btns {
+    top: 25%;
+    z-index: 1;
+  }
+  .projects--btns a {
+    text-decoration: none;
+  }
+  .projects--btn {
+    padding: 0.5rem 0.2rem;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: all 0.5s ease-in-out;
+  }
+}
 .contact {
   height: 100vh;
   padding-top: 30vh;
