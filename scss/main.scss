@@ -29,6 +29,7 @@ body{
     top: 1rem;
     left: 1rem;
     z-index: 2000;
+    position: fixed;
 }
 h1, h2, h3 {
     font-weight: 400;
@@ -50,17 +51,11 @@ nav{
     color: $secondary-color;
 }
 
-// header{
-//     width: 100%;
-//     z-index: 2;
-//     position: fixed;
-// }
-
 header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,23 +63,34 @@ header{
     transition: 1s;
     width: 100%;
 }
+header.index{
+    z-index: 100;
+}
 
 header.sticky{
     background-color: rgba(0, 0, 0, 0.9);
-    // color: #fff;
-    padding: 0 10px;
+    padding: 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
+.project-body .logo-title {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 @media (max-width: 900px){
-    header.sticky:not(.contact) {
+        header.sticky:not(.contact) {
         background-color: rgba(0, 0, 0, 0);
     }
-
     .logo-title {
         margin-right: 1rem;
         font-size: 20px;
     }
-    header.sticky .logo-title:not(.contact) {
+    header .projects, header .contact {
+        display: none;
+    }
+    header.sticky .projects .contact {
+        display: none;
+    }
+    header.sticky .logo-title {
         background-color: rgba(0, 0, 0, 0.6);
     }
     

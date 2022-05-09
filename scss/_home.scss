@@ -25,17 +25,14 @@
   }
 }
 
-// @media (max-width: 900px){
-//     .home{
-//         background: linear-gradient(
-//             to right,
-//             rgba($primary-color, 0.9),
-//             rgba($primary-color, 0.3)
-//             ),
-//             url(../img/home.jpg) center -100px;
-//             background-size: cover;
-//          }
-//      }
+@media (max-width: 900px){
+    .homepage{
+        .social--icons {
+          display: flex;
+          flex-direction: row;
+        }
+         }
+     }
 
 // @media (max-width: 600px){
 //    .home{

@@ -41,6 +41,7 @@
     &.open {
       transform: rotate(180deg);
       background: transparent;
+      
 
       &::before {
         transform: rotate(45deg) translate(5px, 8px);
@@ -64,6 +65,7 @@ nav {
 
     &.open {
         visibility: visible;
+        
     }
 
     .nav--menu {
@@ -81,12 +83,13 @@ nav {
         @include transition-ease;
 
         &.open {
+          z-index: 3000;
             transform: translateY(0);
             @include transition-ease;
         }
         &--item {
             @include transition-ease;
-            transform: translateX(100vw);
+            // transform: translateX(100vw);
 
           &.open{
             transform: translateX(0vw);
@@ -99,6 +102,7 @@ nav {
           
         &--link {
           display: inline-block;
+          z-index: 1000;
           font-size: 2rem;
           text-transform: uppercase;  
           padding: 2rem 0;

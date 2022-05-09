@@ -62,6 +62,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+    z-index: -1;
   }
 
   &--item {
@@ -142,6 +143,12 @@
             position: absolute;
             @include transition-ease;
           }
+          &:hover {
+            &::after {
+              top: 50%;
+          }
+          }
+
             .projects--btn {
               width: fit-content;
               margin: 0 auto;

@@ -4,7 +4,8 @@ const nav = document.querySelector('.nav');
 const navMenu = document.querySelector('.nav--menu');
 const navItems = document.querySelectorAll('.nav--menu--item');
 const body = document.querySelector('.body');
-const logo = document.querySelector(".logo");
+// const logo = document.querySelector(".logo-title");
+const header = document.querySelector('header');
 
 
  menuBtn.addEventListener('click', toggleMenu);
@@ -15,6 +16,8 @@ const logo = document.querySelector(".logo");
     hamburger.classList.toggle('open');
     nav.classList.toggle('open');
     navMenu.classList.toggle('open');
+    navMenu.classList.contains('open')? header.classList.add("index"): header.classList.remove('index');
+    // header.classList.contains('sticky')? logo.classList.add("background") : logo.classList.remove('background');
     navItems.forEach(item => item.classList.toggle('open'));
 
 }

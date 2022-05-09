@@ -27,6 +27,12 @@
   font-weight: 700;
 }
 
+@media (max-width: 900px) {
+  .homepage .social--icons {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .menu--btn {
   position: absolute;
   z-index: 1;
@@ -104,12 +110,12 @@ nav .nav--menu {
   transition: all 0.5s ease-in-out;
 }
 nav .nav--menu.open {
+  z-index: 3000;
   transform: translateY(0);
   transition: all 0.5s ease-in-out;
 }
 nav .nav--menu--item {
   transition: all 0.5s ease-in-out;
-  transform: translateX(100vw);
 }
 nav .nav--menu--item.open {
   transform: translateX(0vw);
@@ -119,6 +125,7 @@ nav .nav--menu--item.active > a {
 }
 nav .nav--menu--link {
   display: inline-block;
+  z-index: 1000;
   font-size: 2rem;
   text-transform: uppercase;
   padding: 2rem 0;
@@ -344,6 +351,7 @@ nav .nav--menu--link:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
+  z-index: -1;
 }
 .projects--item {
   position: relative;
@@ -416,6 +424,9 @@ nav .nav--menu--link:hover {
     position: absolute;
     transition: all 0.5s ease-in-out;
   }
+  .projects--item:hover::after {
+    top: 50%;
+  }
   .projects--item .projects--btn {
     width: fit-content;
     margin: 0 auto;
@@ -468,6 +479,7 @@ nav .nav--menu--link:hover {
 
 .form_box {
   min-width: 50%;
+  z-index: 3000;
 }
 
 .contact--email, .contact--phone, .contact--address {
@@ -516,7 +528,7 @@ nav .nav--menu--link:hover {
   color: #fff;
   background: #ff652f;
   border-radius: 0.5rem;
-  height: 45px;
+  height: 50px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -624,6 +636,7 @@ body {
   top: 1rem;
   left: 1rem;
   z-index: 2000;
+  position: fixed;
 }
 
 h1, h2, h3 {
@@ -648,7 +661,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -657,10 +670,18 @@ header {
   width: 100%;
 }
 
+header.index {
+  z-index: 100;
+}
+
 header.sticky {
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 0 10px;
+  padding: 0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-body .logo-title {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 900px) {
@@ -673,7 +694,15 @@ header.sticky {
     font-size: 20px;
   }
 
-  header.sticky .logo-title:not(.contact) {
+  header .projects, header .contact {
+    display: none;
+  }
+
+  header.sticky .projects .contact {
+    display: none;
+  }
+
+  header.sticky .logo-title {
     background-color: rgba(0, 0, 0, 0.6);
   }
 }

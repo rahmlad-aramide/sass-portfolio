@@ -35,6 +35,7 @@
   }
   .form_box {
     min-width: 50%;
+    z-index: 3000;
 }
 
 .contact--email, .contact--phone, .contact--address {
@@ -72,12 +73,11 @@
 .form_box form textarea::placeholder {
     color:#999;
 }
-.form_box form input[type="submit"] {
-    // max-width: 100px;  
+.form_box form input[type="submit"] { 
     color: #fff; 
     background: $secondary-color;
     border-radius: 0.5rem;
-    height: 45px;
+    height: 50px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
