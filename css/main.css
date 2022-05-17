@@ -479,7 +479,10 @@ nav .nav--menu--link:hover {
 
 .form_box {
   min-width: 50%;
-  z-index: 3000;
+}
+
+.form-index {
+  z-index: 200;
 }
 
 .contact--email, .contact--phone, .contact--address {
@@ -588,6 +591,11 @@ nav .nav--menu--link:hover {
 
   footer {
     transform: rotate(90deg) translate(-3rem, -5rem);
+  }
+}
+@media (max-width: 600px) {
+  .form_box {
+    margin: 0 1rem;
   }
 }
 @media screen and (min-width: 768px) {

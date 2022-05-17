@@ -35,7 +35,9 @@
   }
   .form_box {
     min-width: 50%;
-    z-index: 3000;
+}
+.form-index {
+  z-index: 200;
 }
 
 .contact--email, .contact--phone, .contact--address {
@@ -136,15 +138,9 @@
        }
        
   
-  // @media (max-width: 600px){
-  //    .contact{
-  //        background: linear-gradient(
-  //            to right,
-  //            rgba($primary-color, 0.9),
-  //            rgba($primary-color, 0.3)
-  //            ),
-  //            url(../img/home.jpg) center -50px;
-  //            background-size: cover;
-  //         }
-  //     }
+  @media (max-width: 600px){
+     .form_box{
+       margin: 0 1rem;
+     }
+      }
   

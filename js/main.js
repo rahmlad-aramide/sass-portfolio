@@ -6,17 +6,20 @@ const navItems = document.querySelectorAll('.nav--menu--item');
 const body = document.querySelector('.body');
 // const logo = document.querySelector(".logo-title");
 const header = document.querySelector('header');
-
+const form = document.querySelector('.form_box')
 
  menuBtn.addEventListener('click', toggleMenu);
 //  body.addEventListener('click', toggleMenu);
 //  nav.addEventListener('click', toggleMenu);
 
+  const width = window.innerWidth;
  function toggleMenu(){
     hamburger.classList.toggle('open');
     nav.classList.toggle('open');
     navMenu.classList.toggle('open');
-    navMenu.classList.contains('open')? header.classList.add("index"): header.classList.remove('index');
+    if(width >= 760)
+    {navMenu.classList.contains('open')? header.classList.add("index"): header.classList.remove('index');}    
+    navMenu.classList.contains('open')? form.classList.remove("form-index"): form.classList.add('form-index');
     // header.classList.contains('sticky')? logo.classList.add("background") : logo.classList.remove('background');
     navItems.forEach(item => item.classList.toggle('open'));
 
